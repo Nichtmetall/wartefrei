@@ -3,8 +3,7 @@ import { Clock, RefreshCw, Route, MapPin, Star, History, Heart, Trash2, ChevronD
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { vvoApi, type VVOStop, type VVOStopDepartures, type VVODeparture, type VVORoute, type VVOTrip } from '@/lib/vvo-api';
+import { vvoApi, type VVOStop, type VVOStopDepartures, type VVODeparture } from '@/lib/vvo-api';
 import { cookieManager } from '@/lib/cookies';
 import RouteSearch from './RouteSearch';
 import StopSearch from './StopSearch';
@@ -13,10 +12,9 @@ import StopSearch from './StopSearch';
 interface RouteDetailsProps {
   departure: VVODeparture;
   selectedStop: VVOStop | null;
-  formatExactTime: (departure: VVODeparture) => string;
 }
 
-function RouteDetails({ departure, selectedStop, formatExactTime }: RouteDetailsProps) {
+function RouteDetails({ departure, selectedStop }: RouteDetailsProps) {
   const [lineStops, setLineStops] = useState<Array<{
     name: string;
     city?: string;
@@ -277,8 +275,7 @@ function DepartureCard({
       {expandedDepartures.has(uniqueId) && (
         <RouteDetails 
           departure={departure} 
-          selectedStop={selectedStop} 
-          formatExactTime={formatExactTime}
+          selectedStop={selectedStop}
         />
       )}
     </div>
