@@ -7,8 +7,6 @@ Ein Echtzeit-Dashboard für den Verkehrsverbund Oberelbe (VVO) mit aktuellen Abf
 🚍 **Echtzeitabfahrten** - Aktuelle Abfahrtszeiten für Dresden und Umgebung  
 🚋 **Multi-Modal** - Unterstützung für Straßenbahn, Bus, S-Bahn und Metro  
 🕒 **Live-Updates** - Automatische Aktualisierung der Abfahrtszeiten  
-🎨 **Modernes Design** - Responsive UI mit TailwindCSS und Shadcn/ui  
-🇩🇪 **Deutsche Oberfläche** - Vollständig lokalisiert  
 
 ## Tech Stack
 
@@ -37,14 +35,6 @@ npm run dev
 
 Das Dashboard nutzt die VVO Widgets API für Echtzeit-Verkehrsdaten. Bei CORS-Problemen wird automatisch auf Mock-Daten zurückgegriffen.
 
-### Verfügbare Haltestellen
-
-- University Campus
-- Dresden Hauptbahnhof  
-- Postplatz
-- Pirnaischer Platz
-- Albertplatz
-
 ## Verwendung
 
 1. **Haltestelle auswählen** - Verwende das Dropdown-Menü
@@ -69,7 +59,6 @@ npm run lint
 
 - [ ] Verbindungssuche zwischen Haltestellen
 - [ ] Favoriten-Haltestellen
-- [ ] Push-Benachrichtigungen
 - [ ] Karten-Integration
 - [ ] Störungsmeldungen
 
